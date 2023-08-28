@@ -8,7 +8,7 @@
 }
 
 body {
-  background: whitesmoke;
+  background: rgb(245, 233, 211);
 }
 
 .header {
@@ -17,7 +17,7 @@ body {
   left: 0;
   width: 100%;
   padding: 20px 10%;
-  background: wheat;
+  background: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,7 +26,22 @@ body {
 
 .logo {
   font-size: 25px;
+  color: orange;
+  text-decoration: none;
+  font-weight: 450;
+}
+
+.navBar a {
+  font-family: 18px;
+  color-scheme: orange;
+  text-decoration: none;
+  font-weight: 450;
+  margin-left: 45px;
+  transition: 0.3s;
   color: white;
-  text-decoration: dashed;
-  font-weight: 500;
+}
+
+.navBar a:hover,
+.navBar a.Main {
+  color: orange;
 }
