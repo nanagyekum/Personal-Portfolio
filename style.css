@@ -60,11 +60,12 @@ body {
   margin-bottom: 20px;
 }
 
-.Intro h4:hover,
+.Intro h3:hover,
 .Intro p:hover {
   color: orange;
   transition: 0.3s;
 }
+
 .resumeBtn {
   background: rgb(238, 182, 78);
   padding: 10px 18px;
@@ -80,18 +81,31 @@ body {
   color: white;
   transition: 0.3s;
 }
-.images {
-  width: 45%;
-  height: 80%;
-  position: relative;
-  bottom: 0;
-  right: 100px;
-}
-.images me {
-  height: 100%;
+.homeIcons {
   position: absolute;
-  left: 50%;
-  margin: 40px auto 0;
-  text-align: center;
-  width: 200px;
+  bottom: 40px;
+  width: 170px;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+.homeIcons a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 3px solid;
+  border-radius: 50%;
+  font-size: 20px;
+  text-decoration: none;
+  color: orange;
+  margin: auto;
+}
+.homeIcons a:hover {
+  color: white;
+  transition: 0.3s;
 }
