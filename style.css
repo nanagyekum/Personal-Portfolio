@@ -76,7 +76,7 @@ body {
   font-size: 45px;
   color: white;
   font-weight: 750;
-  margin: -3px 0;
+  margin: 10px 0;
 }
 
 .Intro h3 {
@@ -100,6 +100,7 @@ body {
 
 .Intro p {
   font-size: 16px;
+  margin: 10px 0;
 }
 
 .Intro p:hover {
@@ -123,6 +124,9 @@ body {
   font-weight: 500;
   text-align: center;
   width: fit-content;
+  opacity: 0;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: 0.7s;
 }
 
 .resumeBtn a:hover {
@@ -152,9 +156,9 @@ body {
   text-decoration: none;
   color: orange;
   margin: auto;
-  transition: 0.4 ease;
-  animation: slideRight 1s ease forwards;
-  animation-delay: 0.7s;
+  opacity: 0;
+  animation: slideLeft 1ms ease forwards;
+  animation-delay: calc(0.2s * var(--i));
 }
 .homeIcons a:hover {
   color: white;
@@ -165,12 +169,26 @@ body {
   max-width: 450px;
   padding: 20px 30px;
   border-radius: 30px;
+  opacity: 0;
+  animation: zoomIn 1ms ease forwards, floatImage 4s ease-in-out infinite;
+  animation-delay: 2s, 3s;
 }
 
 /* Animation */
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 @keyframes slideLeft {
   0% {
-    transform: translateX(-100);
+    transform: translateX(100px);
     opacity: 0;
   }
   100% {
@@ -181,17 +199,7 @@ body {
 
 @keyframes slideTop {
   0% {
-    transform: translateY(-100);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes slideBottom {
-  0% {
-    transform: translateY(-100);
+    transform: translateY(100px);
     opacity: 0;
   }
   100% {
@@ -200,13 +208,35 @@ body {
   }
 }
 
-@keyframes slideRight {
+@keyframes slideBottom {
   0% {
-    transform: translateX(-100);
+    transform: translateY(-100px);
     opacity: 0;
   }
   100% {
-    transform: translateX(0);
+    transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
